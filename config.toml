@@ -1,0 +1,16 @@
+[[games]]
+exe = 'Game.exe'
+
+# Powerplan relies on high performance
+[[games.OnProcessStart]]
+Name = 'powercfg.exe'
+Args = '/setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c'
+HideWindow = true
+OnForeground = true # is also taken over when the window gets the focus
+
+# Powerplan relies on Balanced
+[[games.OnProcessFinish]]
+Name = 'powercfg.exe'
+Args = '/setactive 381b4222-f694-41f0-9685-ff5bb260df2e'
+HideWindow = true
+OnBackground = true # is also adopted if the window loses focus
