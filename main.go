@@ -111,7 +111,7 @@ func (l *Listener) newActiveWindowCallback(
 		return
 	}
 
-	pHndl, err := windows.OpenProcess(ProcessQueryInformation|ProcessVMRead, false, pid)
+	pHndl, err := windows.OpenProcess(ProcessQueryInformation, false, pid)
 	defer windows.CloseHandle(pHndl)
 	if pHndl == 0 || err != nil {
 		return

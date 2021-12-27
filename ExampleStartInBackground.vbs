@@ -1,2 +1,1 @@
-Set objShell = WScript.CreateObject("WScript.Shell")
-objShell.Run "hook", 0, False
+WScript.CreateObject("WScript.Shell").Run "Hook", 0, False
